@@ -1,0 +1,19 @@
+{
+  "name": "oukonva-scraper",
+  "version": "1.0.0",
+  "description": "oukouva app scraper",
+  "main": "handler.js",
+  "scripts": {
+    "start": "npx tsc && serverless invoke local --function oukouvaScrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsdom": "^21.1.1",
+    "jsdom": "^22.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
