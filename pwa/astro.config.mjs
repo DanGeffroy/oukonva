@@ -7,6 +7,8 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://dangeffroy.github.io/',
+  base: '/oukonvva',
   integrations: [tailwind(), sitemap(), svelte()],
   vite: {
     plugins: [VitePWA({
