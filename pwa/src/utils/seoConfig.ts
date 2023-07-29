@@ -33,17 +33,17 @@ export const manifest: Partial<ManifestOptions> = {
   display: "standalone",
   icons: [
     {
-      src: "/favicons/favicon-192x192.png",
+      src: "/oukonva/favicons/favicon-192x192.png",
       sizes: "192x192",
       type: "image/png",
     },
     {
-      src: "/favicons/favicon-512x512.png",
+      src: "/oukonva/favicons/favicon-512x512.png",
       sizes: "512x512",
       type: "image/png",
     },
     {
-      src: "/favicons/favicon-512x512.png",
+      src: "/oukonva/favicons/favicon-512x512.png",
       sizes: "512x512",
       type: "image/png",
       purpose: "any maskable",
