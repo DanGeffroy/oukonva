@@ -17,7 +17,7 @@
   </div>
   <div class="flex">
     <div
-      class="box-border max-w-7xl mx-4 sm:columns-1 md:columns-2 lg:columns-3 xl:mx-auto xl:columns-3 mt-4"
+      class="w-full box-border max-w-7xl mx-4 sm:columns-1 md:columns-2 lg:columns-3 xl:mx-auto xl:columns-3 mt-4"
     >
       {#each filteredEvents as event}
         <Event {event} />
