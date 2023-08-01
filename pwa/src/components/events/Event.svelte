@@ -5,7 +5,7 @@
 
 <article
   transition:slide|local
-  class="mb-4 break-inside p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border"
+  class="mb-4 break-inside-avoid-column p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border"
 >
   <h2 class="text-3xl font-extrabold pb-4">{event.title}</h2>
   <div class="flex pb-4 items-center justify-between">
