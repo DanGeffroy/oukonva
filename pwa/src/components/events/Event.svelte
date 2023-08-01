@@ -1,13 +1,18 @@
 <script lang="ts">
   import { fade, slide } from "svelte/transition";
+  import Location from "./Location.svelte";
   export let event: any;
 </script>
 
 <article
   transition:slide|local
   class="mb-4 break-inside-avoid-column p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border"
->
-  <h2 class="text-3xl font-extrabold pb-4">{event.title}</h2>
+> 
+  <div class="flex w-full">
+    <h2 class="text-3xl font-extrabold pb-4">{event.title}</h2>
+    <Location {event}/>
+  </div>
+ 
   <div class="flex pb-4 items-center justify-between">
     <div class="flex">
       <div class="flex flex-col">
