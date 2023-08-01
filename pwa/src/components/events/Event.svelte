@@ -7,18 +7,19 @@
   transition:slide|local
   class="mb-4 break-inside p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border"
 >
-  <div class="flex pb-6 items-center justify-between">
+  <h2 class="text-3xl font-extrabold pb-4">{event.title}</h2>
+  <div class="flex pb-4 items-center justify-between">
     <div class="flex">
       <div class="flex flex-col">
         <div class="flex items-center">
           <p class="inline-block text-lg font-bold mr-2">{event.place}</p>
         </div>
-        <div class="text-slate-500 dark:text-slate-300">{event.time}</div>
+        <div class="text-slate-500 dark:text-slate-300">{event.date?`${event.date.slice(8,10)}/${event.date.slice(5, 7)}`:''} {event.time?event.time:''}</div>
       </div>
     </div>
   </div>
-  <h2 class="text-3xl font-extrabold">{event.title}</h2>
-  <div class="py-4">
+  
+  <div class="pb-2">
     <p>{event.artiste || event.price}</p>
   </div>
   <div class="w-full">
