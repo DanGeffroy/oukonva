@@ -73,7 +73,7 @@ class OukonvaEvent {
                 this.date = dateObject.toISOString();
                 this.time = time;
                 this.price = (_d = div.querySelector("span.event-label")) === null || _d === void 0 ? void 0 : _d.textContent;
-                this.map = "47.2011869,-1.5755363";
+                this.map = "47.2012136492942,-1.5729469373870897";
             }
         }
     }
@@ -111,7 +111,7 @@ class OukonvaEvent {
                 this.date = dateObject.toISOString();
                 this.time = time;
                 this.price = (_d = div.querySelector("span.event-label")) === null || _d === void 0 ? void 0 : _d.textContent;
-                this.map = "47.2012178,-1.5935609";
+                this.map = "47.2012136492942,-1.5729469373870897";
             }
         }
     }
