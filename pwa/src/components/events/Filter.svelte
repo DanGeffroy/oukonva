@@ -1,19 +1,23 @@
 <script lang="ts">
+  import { clickOutside} from "../helpers/clickOutside";
   export let filter: string = "";
   export let events: any[] = [];
   let dropdown: any = null;
   const places: any[] = [...new Set(events.map((event) => event.place))];
 
+
+  const toggleDropDown = () => { dropdown.classList.toggle("hidden") };
+  const hideDropDown = () => { dropdown.classList.add("hidden") };
   const select = (place: string) => {
-    dropdown.classList.toggle("hidden");
+    toggleDropDown();
     filter = place;
   };
 </script>
 
 <button
   id="dropdownDefaultButton"
-  on:click={() => dropdown.classList.toggle("hidden")}
-  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  on:click={() => toggleDropDown()}
+  class="text-slate-500 dark:text-slate-300 bg-white dark:bg-slate-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
   type="button"
   >{filter !== "" ? filter : "All places"}
   <svg
@@ -34,6 +38,7 @@
 >
 <!-- Dropdown menu -->
 <div
+  use:clickOutside={"#dropdownDefaultButton"} on:click_outside={()=>hideDropDown()}
   id="dropdown"
   bind:this={dropdown}
   class="w-max z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 absolute"

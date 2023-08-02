@@ -1,4 +1,9 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Splash from '../components/Splash.astro';
+import DarkLightSwitch from "../components/DarkLigthSwitch.astro"
+import Menu from '../components/Menu.svelte';
 interface Props {
   title: string;
 }
@@ -21,7 +26,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="text-black dark:text-slate-100 bg-slate-200 dark:bg-slate-900">
+    <Menu client:only/>
+    <Splash />
+    <DarkLightSwitch />
+    <Header />
     <slot />
+    <Footer />
     <script>
       // This is a hack to get vite-plugin-pwa to generate a sw.js file.
       // Do not remove this script tag.

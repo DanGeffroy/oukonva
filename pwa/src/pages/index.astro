@@ -1,19 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import DarkLightSwitch from "../components/DarkLigthSwitch.astro";
-import Splash from "../components/Splash.astro";
-import Footer from "../components/Footer.astro";
 import EventList from "../components/events/EventList.svelte";
-import Header from "../components/Header.astro";
 ---
 
 <Layout title="Oukonva">
-  <Splash />
-  <DarkLightSwitch />
-  <Header />
-
   <main>
     <EventList client:only />
   </main>
-  <Footer />
 </Layout>

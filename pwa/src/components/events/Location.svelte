@@ -14,8 +14,8 @@
 
 <button class="ml-auto flex align-top" on:click={() => showMap()}>
   <svg
-    width="39px"
-    height="57px"
+    width="26px"
+    height="38px"
     viewBox="0 0 39 57"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

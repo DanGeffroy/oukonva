@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Counter from "../../components/drinks/Counter.svelte"
+---
+
+<Layout title="Drinks counter">
+  <main>
+    <Counter client:only />
+  </main>
+</Layout>
